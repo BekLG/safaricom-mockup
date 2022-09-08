@@ -1,0 +1,28 @@
+
+.questions-container{
+    color: black;
+}
+.submit-btn{
+    color: black;
+    
+    margin-left: 15%;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+.all-container{
+    width: 100%;
+    
+}
+.form-container{
+    width: 35%;
+    border: 3px;
+}
+.phone-span{
+    display: inline;
+}
+.inputs{
+    margin-top: 18px;
+}
+.submit-btn{
+    color: rgb(5, 90, 5);
+}
