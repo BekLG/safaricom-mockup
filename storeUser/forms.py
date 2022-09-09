@@ -1,5 +1,3 @@
-from re import L
-from socket import fromshare
 from django import forms
 
 class UserProfile(forms.Form):
