@@ -131,14 +131,17 @@
                             <h1 class="display-5">success!</h1>
                             <p class="h6">you have registered successfully.We will contact you soon.</p>
                             <p class="h6">share for others!</p>
-                            <a href="https://www.safaricom.co.ke"><button class="btn btn-success submit-btn">Go back to HOME page</button></a>         
+                            <a class="btn btn-success submit-btn" href="https://www.safaricom.co.ke">Go back to HOME page</a>         
                         </div>
                     {% else %}
-                        <h1 class="display-6">please fill out this form to be in the list of potential winners</h1>
+                    <div class="container">
+                        <h3 class="display-6 d-flex p-2">please fill out this form to be in the list of potential winners</h1>
                        
                         {{form.as_p}}
 
                         <button name="submit" class="btn btn-success inputs submit-btn">Submit</button>
+                    </div>
+                        
 
                     {% endif %}
                 </form>

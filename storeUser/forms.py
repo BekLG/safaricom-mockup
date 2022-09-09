@@ -29,7 +29,7 @@ class UserProfile(ModelForm):
             'educationLevel':forms.TextInput(attrs={'class':'form-control','placeholder':'Education level'}),
             'age':forms.TextInput(attrs={'class':'form-control','placeholder':'Age'}),
             'sex':forms.TextInput(attrs={'class':'form-control','placeholder':'Sex'}),
-            'phoneNumber':forms.TextInput(attrs={'class':'form-control','placeholder':'Phoen Number'}),
+            'phoneNumber':forms.TextInput(attrs={'class':'form-control','placeholder':'Phone Number'}),
             'address':forms.TextInput(attrs={'class':'form-control','placeholder':'Address'})
         }
     
