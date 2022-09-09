@@ -213,8 +213,8 @@
     
         </form>
 
-<form action="/" method="post">{% csrf_token %}
-        <a class="btn btn-dark submit-btn " href="/register"> submit answers</a>
+<form action="/" method="GET">{% csrf_token %}
+        <a class="btn btn-dark submit-btn " href="{% url 'register' %}"> submit answers</a>
     </form>
     
 

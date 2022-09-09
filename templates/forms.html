@@ -123,58 +123,24 @@
         <div class="all-container text-center">
 
             <div class="text-center form-container mx-auto">
-                <h1 class="display-6">please fill out this form to be in the list of potential winners</h1>
-                <form action="" method="post">{% csrf_token %}
-                    <div class="row inputs">
-                        <div class="col">
-                          <input type="text" name="fName" class="form-control" placeholder="First name" aria-label="First name" autofocus required>
+                <form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% if submitted %}
+                        <br><br><br><br><br>
+                        <div class="text-center ">
+                            <h1 class="display-5">success!</h1>
+                            <p class="h6">you have registered successfully.We will contact you soon.</p>
+                            <p class="h6">share for others!</p>
+                            <a href="https://www.safaricom.co.ke"><button class="btn btn-success submit-btn">Go back to HOME page</button></a>         
                         </div>
-                        <div class="col">
-                          <input type="text" name="lName" class="form-control" placeholder="Last name" aria-label="Last name" required>
-                        </div>
-                      </div>
-
-                      <select name="educationLevel" class="form-select inputs" aria-label="Education level">
-                        <option selected></option>
-                        <option value="1">grade 1-12</option>
-                        <option value="2">degree</option>
-                        <option value="3">masters</option>
-                        <option value="4">Other</option>
-                      </select>
-
-                      <div class="row inputs">
-                        <div class="col">
-                          <input type="text" name="age" class="form-control" placeholder="Age" aria-label="Age" required>
-                        </div>
-                        <div class="col">
-
-                            <select name="sex" class="form-select" aria-label="Sex">
-                                <option selected></option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                            </select>
-                        </div>
-                      </div>
-                      <div class="row inputs">
-                        <div class="col input-group flex-nowrap">
-                            <span class="input-group-text phone-span" id="basic-addon1">+251</span>
-                            <input type="text" name="phoneNumber" class="form-control" placeholder="Phone number" aria-label="Phone no" required>
-                          </div>
+                    {% else %}
+                        <h1 class="display-6">please fill out this form to be in the list of potential winners</h1>
                        
-                        <div class="col">
-                            <input type="text" name="address" class="form-control" placeholder="Adress" aria-label="Adress" required>
-                        </div>
+                        {{form.as_p}}
 
-                      </div>
-                      <a name="submit" href="success" class="btn btn-success inputs submit-btn">Submit</a>
-                      <!-- {% if form.is_valid%}
-                      <a name="submit" href="success" class="btn btn-success inputs submit-btn">Submit</a>
-                      {% else %}
-                      <a name="submit" href="register" class="btn btn-success inputs submit-btn">Submit</a>
-                      {% endif %} -->
-                      
+                        <button name="submit" class="btn btn-success inputs submit-btn">Submit</button>
 
-    
+                    {% endif %}
                 </form>
     
             </div>
