@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +124,7 @@
 
             <div class="text-center form-container mx-auto">
                 <h1 class="display-6">please fill out this form to be in the list of potential winners</h1>
-                <form action="" method="post">
+                <form action="" method="post">{% csrf_token %}
                     <div class="row inputs">
                         <div class="col">
                           <input type="text" name="fName" class="form-control" placeholder="First name" aria-label="First name" autofocus required>
@@ -157,7 +158,7 @@
                       <div class="row inputs">
                         <div class="col input-group flex-nowrap">
                             <span class="input-group-text phone-span" id="basic-addon1">+251</span>
-                            <input type="text" name="phoneNumber" class="form-control" placeholder="Phone number" aria-label="Phone no" >
+                            <input type="text" name="phoneNumber" class="form-control" placeholder="Phone number" aria-label="Phone no" required>
                           </div>
                        
                         <div class="col">
@@ -165,8 +166,12 @@
                         </div>
 
                       </div>
-
-                      <button type="submit " name="submit" class="btn btn-success inputs submit-btn">Submit</button>
+                      <a name="submit" href="success" class="btn btn-success inputs submit-btn">Submit</a>
+                      <!-- {% if form.is_valid%}
+                      <a name="submit" href="success" class="btn btn-success inputs submit-btn">Submit</a>
+                      {% else %}
+                      <a name="submit" href="register" class="btn btn-success inputs submit-btn">Submit</a>
+                      {% endif %} -->
                       
 
     

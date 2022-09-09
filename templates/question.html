@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -212,8 +213,8 @@
     
         </form>
 
-    <form action="/" method="post">
-        <button type="submit" class="btn btn-dark submit-btn "> submit answers</button>
+<form action="/" method="post">{% csrf_token %}
+        <a class="btn btn-dark submit-btn " href="/register"> submit answers</a>
     </form>
     
 

@@ -22,9 +22,8 @@ from storeUser import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('question/', user_views.loadQuestions),
-    path('question/register', user_views.getUserInfo),
-    path('question/register/success', admin.site.urls),
+    path('register', user_views.getUserInfo),
+    path('success', user_views.successPage),
     path('', user_views.loadQuestions),
 ]
 
