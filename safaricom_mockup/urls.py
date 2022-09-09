@@ -26,7 +26,7 @@ urlpatterns = [
     path('question/register', user_views.getUserInfo),
     path('question/register/success', admin.site.urls),
     path('', user_views.loadQuestions),
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-]
