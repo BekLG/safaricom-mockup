@@ -2,7 +2,6 @@ from re import I
 import re
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from django.contrib import messages
 
 from .forms import UserProfile
 
