@@ -26,3 +26,17 @@
 .submit-btn{
     color: rgb(5, 90, 5);
 }
+@media (max-width: 544px)
+{
+    .form-container{
+        width: 90%;
+        border: 3px;
+    }
+    .gift-text{
+        margin-left: 28px;
+    }
+    .winner-text{
+        color: rgba(42, 128, 56, 0.966);
+        
+    }
+}
